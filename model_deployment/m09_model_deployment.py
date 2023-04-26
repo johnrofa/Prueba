@@ -8,6 +8,14 @@ import os
 def predict_proba(url):
 
     clf = joblib.load(os.path.dirname(__file__) + '/phishing_clf.pkl') 
+    try:
+        print("============================================================")
+        print("============================================================")
+        print("============================================================")
+        print("============================================================")
+        leMake= joblib.load(os.path.dirname(__file__) + 'leMake_01.pkl')
+    except:
+        pass
 
     url_ = pd.DataFrame([url], columns=['url'])
   
