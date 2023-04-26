@@ -6,10 +6,10 @@ import sys
 import os
 
 def predict_proba(url):
-
+    print('ruta : ', os.path.dirname(__file__) + '/phishing_clf.pkl')
     clf = joblib.load(os.path.dirname(__file__) + '/phishing_clf.pkl') 
     try:
-        leMake= joblib.load(os.path.dirname(__file__) + 'leMake_01.pkl')
+        leMake= joblib.load(os.path.dirname(__file__) + '/leMake_01.pkl')
         print("============================================================")
         print("============================================================")
         print("============================================================")
